@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerBooking.Data\CustomerBooking.Data.csproj" />
+    <ProjectReference Include="..\..\2.Package\OrchestrationDemo.Handlers\RequestHandlers.csproj" />
+  </ItemGroup>
+
+</Project>
