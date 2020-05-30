@@ -1,13 +1,13 @@
 ﻿using CustomerBooking.Data;
 using CustomerBooking.Data.Enums;
 using CustomerBooking.Data.Models;
-using CustomerBooking.Service.Services.CreateBooking;
 using OrchestrationDemo.Handlers;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace CustomerBooking.Service.Services.BookTaxi
+namespace CustomerBooking.Service.Services.CreateBooking
 {
     public class CreateBookingHandler : IRequestHandler<CreateBookingRequest, CreateBookingResponse>
     {
@@ -26,7 +26,7 @@ namespace CustomerBooking.Service.Services.BookTaxi
                     HttpStatusCode.Conflict,
                     new ErrorResponse
                     {
-                        ErrorMessage = "Cannot book new job while one is already in progress!"
+                        ErrorMessage = new List<string> { "Cannot book new job while one is already in progress" }
                     }
                 );
             }

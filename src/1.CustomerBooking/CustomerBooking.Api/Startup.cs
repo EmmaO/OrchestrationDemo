@@ -1,4 +1,5 @@
 using CustomerBooking.Data;
+using CustomerBooking.Orchestration;
 using CustomerBooking.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,6 +25,7 @@ namespace CustomerBooking.Api
         {
             services.AddControllers();
             services.AddCustomerBookingServices();
+            services.AddOrchestration();
 
             services.AddDbContext<CustomerBookingContext>(options =>
                 options.UseInMemoryDatabase("CustomerBookingDb")

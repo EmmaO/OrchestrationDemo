@@ -1,6 +1,7 @@
 ﻿using CustomerBooking.Data;
 using CustomerBooking.Data.Enums;
 using OrchestrationDemo.Handlers;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace CustomerBooking.Service.Services.CancelBooking
                     HttpStatusCode.NotFound,
                     new ErrorResponse
                     {
-                        ErrorMessage = $"Booking with Id {request.BookingId} not found"
+                        ErrorMessage = new List<string> { $"Booking with Id {request.BookingId} not found" }
                     }
                 );
             }

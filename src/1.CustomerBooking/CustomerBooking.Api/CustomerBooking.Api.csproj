@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CustomerBooking.Data\CustomerBooking.Data.csproj" />
+    <ProjectReference Include="..\CustomerBooking.Orchestration\CustomerBooking.Orchestration.csproj" />
     <ProjectReference Include="..\CustomerBooking.Service\CustomerBooking.Service.csproj" />
   </ItemGroup>
 

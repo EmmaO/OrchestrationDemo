@@ -1,7 +1,9 @@
-﻿namespace OrchestrationDemo.Handlers
+﻿using System.Collections.Generic;
+
+namespace OrchestrationDemo.Handlers
 {
     public class ErrorResponse
     {
-        public string ErrorMessage { get; set; }
+        public IEnumerable<string> ErrorMessage { get; set; }
     }
 }

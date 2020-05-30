@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerBooking.Api", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.CustomerBooking", "1.CustomerBooking", "{39E81F1B-46F1-439F-8C81-CFEA1204198B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DistanceCalculation", "DistanceCalculation", "{D8A7BE78-C2FB-41C3-AB8E-B8BE4C3FDEE1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CostCalculation", "CostCalculation", "{D8A7BE78-C2FB-41C3-AB8E-B8BE4C3FDEE1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistanceCalculation.Api", "src\3.SimpleApis\DistanceCalculation.Api\DistanceCalculation.Api.csproj", "{88F5475C-000A-4E8E-B128-D518D5A459A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CostCalculation.Api", "src\3.SimpleApis\CostCalculation.Api\CostCalculation.Api.csproj", "{88F5475C-000A-4E8E-B128-D518D5A459A3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerBooking.Service", "src\1.CustomerBooking\CustomerBooking.Service\CustomerBooking.Service.csproj", "{65920509-57CA-4764-9FCF-412B851234D9}"
 EndProject
@@ -27,7 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.SimpleApis", "3.SimpleApi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Package", "2.Package", "{69C388C9-A6FD-40DC-AEFC-0118DEE8FB8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerBooking.Data", "src\1.CustomerBooking\CustomerBooking.Data\CustomerBooking.Data.csproj", "{CE9B04D9-40D5-4917-9B89-1CE33FD96834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerBooking.Data", "src\1.CustomerBooking\CustomerBooking.Data\CustomerBooking.Data.csproj", "{CE9B04D9-40D5-4917-9B89-1CE33FD96834}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerBooking.Orchestration", "src\1.CustomerBooking\CustomerBooking.Orchestration\CustomerBooking.Orchestration.csproj", "{DA98FE64-1C2A-4E35-8914-B7B6DAE9B008}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orchestration", "src\2.Package\Orchestration\Orchestration.csproj", "{A07D6BF9-A361-4770-969F-BE9624365474}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{CE9B04D9-40D5-4917-9B89-1CE33FD96834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE9B04D9-40D5-4917-9B89-1CE33FD96834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE9B04D9-40D5-4917-9B89-1CE33FD96834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA98FE64-1C2A-4E35-8914-B7B6DAE9B008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA98FE64-1C2A-4E35-8914-B7B6DAE9B008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA98FE64-1C2A-4E35-8914-B7B6DAE9B008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA98FE64-1C2A-4E35-8914-B7B6DAE9B008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07D6BF9-A361-4770-969F-BE9624365474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07D6BF9-A361-4770-969F-BE9624365474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07D6BF9-A361-4770-969F-BE9624365474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07D6BF9-A361-4770-969F-BE9624365474}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +90,8 @@ Global
 		{F00137B5-6840-4D84-8E39-B01131D74242} = {9B705AB2-B922-49AA-A1CE-2ACCC13D6BD3}
 		{1A99FE9E-D5B8-4392-95AE-0C64D4B066CE} = {F00137B5-6840-4D84-8E39-B01131D74242}
 		{CE9B04D9-40D5-4917-9B89-1CE33FD96834} = {39E81F1B-46F1-439F-8C81-CFEA1204198B}
+		{DA98FE64-1C2A-4E35-8914-B7B6DAE9B008} = {39E81F1B-46F1-439F-8C81-CFEA1204198B}
+		{A07D6BF9-A361-4770-969F-BE9624365474} = {69C388C9-A6FD-40DC-AEFC-0118DEE8FB8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4120F807-32F4-4C51-ACBD-9B49A27D3F60}

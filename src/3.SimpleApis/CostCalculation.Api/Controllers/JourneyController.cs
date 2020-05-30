@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DistanceCalculation.Api.Controllers
+namespace CostCalculation.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

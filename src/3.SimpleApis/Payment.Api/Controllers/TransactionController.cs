@@ -15,7 +15,6 @@ namespace Payment.Api.Controllers
         private static List<Transaction> _data = new List<Transaction>();
 
         [HttpGet]
-        [Route("transaction")]
         public IActionResult GetTransactions()
         {
             return Ok(_data);

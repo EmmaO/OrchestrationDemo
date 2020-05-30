@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using CustomerBooking.Service.Services.BookTaxi;
+using CustomerBooking.Orchestration.CreateBooking;
 using CustomerBooking.Service.Services.CancelBooking;
-using CustomerBooking.Service.Services.CreateBooking;
 using CustomerBooking.Service.Services.GetBookingsByCustomer;
 using Microsoft.AspNetCore.Mvc;
 using OrchestrationDemo.Handlers;
@@ -13,32 +12,27 @@ namespace CustomerBooking.Api.Controllers
     [ApiController]
     public class BookingController : ControllerBase
     {
-        private readonly IRequestHandler<CreateBookingRequest, CreateBookingResponse> _createBookingHandler;
-        private readonly IRequestHandler<CancelBookingRequest> _cancelBookingHandler;
+        private readonly IRequestHandler<CreateBookingOrchestrationRequest> _createBookingOrchestrator;
         private readonly IRequestHandler<GetBookingsByCustomerRequest, GetBookingsByCustomerResponse> _getBookingByCustomerHandler;
 
         public BookingController(
-            IRequestHandler<CreateBookingRequest, CreateBookingResponse> createBookingHandler,
-            IRequestHandler<CancelBookingRequest> cancelBookingHandler,
+            IRequestHandler<CreateBookingOrchestrationRequest> createBookingOrchestrator,
             IRequestHandler<GetBookingsByCustomerRequest, GetBookingsByCustomerResponse> getBookingByCustomerHandler
         )
         {
-            _createBookingHandler = createBookingHandler;
-            _cancelBookingHandler = cancelBookingHandler;
+            _createBookingOrchestrator = createBookingOrchestrator;
             _getBookingByCustomerHandler = getBookingByCustomerHandler;
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateBooking()
         {
-            await _createBookingHandler.HandleAsync(new CreateBookingRequest
+            await _createBookingOrchestrator.HandleAsync(new CreateBookingOrchestrationRequest
             {
                 CustomerId = Guid.NewGuid(),
-                PickupPostcode = "m",
-                DestinationPostcode = "p",
-                JourneyCost = 12
+                DestinationPostcode = "aa",
+                PickupPostcode = "aa"
             });
-
             return Ok();
         }
 

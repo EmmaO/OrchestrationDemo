@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CustomerBooking.Service.Services.BookTaxi
+namespace CustomerBooking.Service.Services.CreateBooking
 {
     public class CreateBookingRequest
     {
