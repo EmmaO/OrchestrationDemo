@@ -10,6 +10,7 @@ namespace Orchestration
         public static void AddOrchestrationPackage(this IServiceCollection services)
         {
             services.AddScoped<ICompensationContext, CompensationContext>();
+            services.AddScoped<IOrchestrationFailureHandler, OrchestrationFailureHandler>();
         }
     }
 }

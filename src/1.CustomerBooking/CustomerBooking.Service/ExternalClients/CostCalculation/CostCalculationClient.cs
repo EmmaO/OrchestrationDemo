@@ -24,13 +24,14 @@ namespace CustomerBooking.Service.ExternalClients.CostCalculation
         public async Task<HandlerResponse<GetJourneyCostResponse>> GetJourneyCost(GetJourneyCostRequest request)
         {
             var response = await _httpClient.GetAsync($"api/journey/cost/from/{request.PickupPostcode}/to/{request.DestinationPostcode}");
+            var content = await response.Content.ReadAsStringAsync();
 
             return new HandlerResponse<GetJourneyCostResponse>()
             {
                 StatusCode = response.StatusCode,
                 Success = response.IsSuccessStatusCode,
-                ErrorResponse = response.IsSuccessStatusCode ? null : new ErrorResponse { ErrorMessage = new List<string> { await response.Content.ReadAsStringAsync() } },
-                SuccessResponse = response.IsSuccessStatusCode ? JsonConvert.DeserializeObject<GetJourneyCostResponse>(await response.Content.ReadAsStringAsync()) : null
+                ErrorResponse = response.IsSuccessStatusCode ? null : new ErrorResponse { ErrorMessage = new List<string> { content } },
+                SuccessResponse = response.IsSuccessStatusCode ? JsonConvert.DeserializeObject<GetJourneyCostResponse>(content) : null
             };
         }
     }

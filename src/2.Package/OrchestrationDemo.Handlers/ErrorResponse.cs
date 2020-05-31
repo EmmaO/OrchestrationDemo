@@ -4,6 +4,6 @@ namespace OrchestrationDemo.Handlers
 {
     public class ErrorResponse
     {
-        public IEnumerable<string> ErrorMessage { get; set; }
+        public IList<string> ErrorMessage { get; set; }
     }
 }

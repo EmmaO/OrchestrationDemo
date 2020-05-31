@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DriverApp.Api.Models;
 using DriverApp.Api.Requests;
 using Microsoft.AspNetCore.Mvc;
+using OrchestrationDemo.Handlers;
 
 namespace DriverApp.Api.Controllers
 {
@@ -24,20 +25,25 @@ namespace DriverApp.Api.Controllers
         [HttpPost]
         public IActionResult AddJob(AddJobRequest request)
         {
-            var newJob = new Job
+            if (new Random().Next(0, 2) % 2 == 0)
             {
-                Id = Guid.NewGuid(),
-                PickupPostcode = request.PickupPostcode,
-                DestinationPostcode = request.DestinationPostcode,
-                Cancelled = false
-            };
+                return BadRequest();
+            } else {
+                var newJob = new Job
+                {
+                    Id = Guid.NewGuid(),
+                    PickupPostcode = request.PickupPostcode,
+                    DestinationPostcode = request.DestinationPostcode,
+                    Cancelled = false
+                };
 
-            _data.Add(newJob.Id, newJob);
+                _data.Add(newJob.Id, newJob);
 
-            return StatusCode((int)HttpStatusCode.Created, new
-            {
-                Id = newJob.Id
-            });
+                return StatusCode((int)HttpStatusCode.Created, new
+                {
+                    Id = newJob.Id
+                });
+            }
         }
 
         [HttpDelete]

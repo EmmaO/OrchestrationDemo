@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace CustomerBooking.Orchestration.CreateBooking
+namespace CustomerBooking.Api.Requests
 {
-    public class CreateBookingOrchestrationRequest
+    public class CreateBookingApiRequest
     {
         public string PickupPostcode { get; set; }
         public string DestinationPostcode { get; set; }

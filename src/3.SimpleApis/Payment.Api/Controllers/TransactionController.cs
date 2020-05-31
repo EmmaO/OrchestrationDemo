@@ -35,7 +35,7 @@ namespace Payment.Api.Controllers
             return Ok();
         }
 
-        private void CallExternalPaymentService(Guid customerId, double amount)
+        private void CallExternalPaymentService(int customerId, double amount)
         {
             //Call out to external payment service in real application
         }

@@ -7,7 +7,7 @@ namespace Payment.Api.Models
 {
     public class Transaction
     {
-        public Guid CustomerId { get; set; }
+        public int CustomerId { get; set; }
         public double Amount { get; set; }
         public DateTime TimeStampUtc { get; set; }
     }

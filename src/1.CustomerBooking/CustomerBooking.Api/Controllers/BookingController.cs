@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using CustomerBooking.Api.Requests;
 using CustomerBooking.Orchestration.CreateBooking;
 using CustomerBooking.Service.Services.CancelBooking;
 using CustomerBooking.Service.Services.GetBookingsByCustomer;
@@ -25,20 +26,21 @@ namespace CustomerBooking.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateBooking()
+        public async Task<IActionResult> CreateBooking(CreateBookingApiRequest request)
         {
-            await _createBookingOrchestrator.HandleAsync(new CreateBookingOrchestrationRequest
+            var res = await _createBookingOrchestrator.HandleAsync(new CreateBookingOrchestrationRequest
             {
-                CustomerId = Guid.NewGuid(),
-                DestinationPostcode = "aa",
-                PickupPostcode = "aa"
+                CustomerId = request.CustomerId,
+                DestinationPostcode = request.DestinationPostcode,
+                PickupPostcode = request.PickupPostcode
             });
-            return Ok();
+
+            return StatusCode((int)res.StatusCode, res.Response);
         }
 
         [HttpGet]
         [Route("{customerId}")]
-        public async Task<IActionResult> GetBookingsByCustomer(Guid customerId)
+        public async Task<IActionResult> GetBookingsByCustomer(int customerId)
         {
             var res = await _getBookingByCustomerHandler.HandleAsync(new GetBookingsByCustomerRequest
             {
