@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CostCalculation.Api", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerBooking.Service", "src\1.CustomerBooking\CustomerBooking.Service\CustomerBooking.Service.csproj", "{65920509-57CA-4764-9FCF-412B851234D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RequestHandlers", "src\2.Package\OrchestrationDemo.Handlers\RequestHandlers.csproj", "{A815536B-78E6-49FD-98CF-F93918B22DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RequestHandlers", "src\2.Package\RequestHandlers\RequestHandlers.csproj", "{A815536B-78E6-49FD-98CF-F93918B22DD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DriverApp", "DriverApp", "{7CA3AC4F-B0E0-42F6-998E-59062AB754B3}"
 EndProject

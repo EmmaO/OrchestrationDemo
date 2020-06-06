@@ -5,7 +5,7 @@ using CustomerBooking.Service.Services.CancelBooking;
 using CustomerBooking.Service.Services.CreateBooking;
 using CustomerBooking.Service.Services.GetBookingsByCustomer;
 using Microsoft.Extensions.DependencyInjection;
-using OrchestrationDemo.Handlers;
+using RequestHandlers;
 
 namespace CustomerBooking.Service
 {

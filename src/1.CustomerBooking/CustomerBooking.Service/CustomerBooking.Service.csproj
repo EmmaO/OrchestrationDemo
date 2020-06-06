@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\2.Package\RequestHandlers\RequestHandlers.csproj" />
     <ProjectReference Include="..\CustomerBooking.Data\CustomerBooking.Data.csproj" />
-    <ProjectReference Include="..\..\2.Package\OrchestrationDemo.Handlers\RequestHandlers.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace OrchestrationDemo.Handlers
+namespace RequestHandlers
 {
     public class ErrorResponse
     {

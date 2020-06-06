@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace OrchestrationDemo.Handlers
+namespace RequestHandlers
 {
     public class FailedHandlerResponse : HandlerResponse
     {
         public FailedHandlerResponse(HttpStatusCode httpStatusCode, ErrorResponse response)
         {
-            this.StatusCode = httpStatusCode;
-            this.ErrorResponse = response;
-            this.Success = false;
+            StatusCode = httpStatusCode;
+            ErrorResponse = response;
+            Success = false;
         }
     }
 
@@ -19,9 +19,9 @@ namespace OrchestrationDemo.Handlers
     {
         public FailedHandlerResponse(HttpStatusCode httpStatusCode, ErrorResponse response)
         {
-            this.StatusCode = httpStatusCode;
-            this.ErrorResponse = response;
-            this.Success = false;
+            StatusCode = httpStatusCode;
+            ErrorResponse = response;
+            Success = false;
         }
     }
 }

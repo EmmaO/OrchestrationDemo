@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\2.Package\OrchestrationDemo.Handlers\RequestHandlers.csproj" />
+    <ProjectReference Include="..\..\2.Package\RequestHandlers\RequestHandlers.csproj" />
   </ItemGroup>
 
 </Project>

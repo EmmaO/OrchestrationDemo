@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrchestrationDemo.Handlers
+namespace RequestHandlers
 {
     public interface IRequestHandler<TRequest>
     {

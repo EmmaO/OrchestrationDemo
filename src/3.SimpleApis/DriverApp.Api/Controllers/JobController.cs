@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using DriverApp.Api.Models;
 using DriverApp.Api.Requests;
 using Microsoft.AspNetCore.Mvc;
-using OrchestrationDemo.Handlers;
 
 namespace DriverApp.Api.Controllers
 {
@@ -14,7 +13,6 @@ namespace DriverApp.Api.Controllers
     public class JobController : ControllerBase
     {
         private static Dictionary<Guid, Job> _data = new Dictionary<Guid, Job>();
-
 
         [HttpGet]
         public IActionResult GetJobs()

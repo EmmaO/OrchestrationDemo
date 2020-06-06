@@ -5,7 +5,7 @@ using CustomerBooking.Orchestration.CreateBooking;
 using CustomerBooking.Service.Services.CancelBooking;
 using CustomerBooking.Service.Services.GetBookingsByCustomer;
 using Microsoft.AspNetCore.Mvc;
-using OrchestrationDemo.Handlers;
+using RequestHandlers;
 
 namespace CustomerBooking.Api.Controllers
 {

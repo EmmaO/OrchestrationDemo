@@ -1,6 +1,6 @@
 ﻿using CustomerBooking.Service.ExternalClients.CostCalculation.Requests;
 using CustomerBooking.Service.ExternalClients.CostCalculation.Responses;
-using OrchestrationDemo.Handlers;
+using RequestHandlers;
 using System.Threading.Tasks;
 
 namespace CustomerBooking.Service.ExternalClients.CostCalculation
